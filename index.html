@@ -12,25 +12,31 @@
 
 <body>
     <header role="banner">
-        <h1>Coding Reloaded</h1>
+        <div class="col-12 row">
+            <h1>Coding Reloaded</h1>
+            <form class="row" id="js-submit" action="submit">
+
+                <select id="langSelect">
+                    <option value="html">html</option>
+                    <option value="javascript">javascript</option>
+                    <option value="css">css</option>
+                </select>
+
+                <input id="searchTerm" type="text" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
     </header>
 
-    <section role="region">
-        <form id="js-submit" action="submit">
-            <label for="langSelect">Language</label>
-            <label for="searchTerm">Term</label> <br>
+    <main role="main">
+        <div class="col-12 row">
+            Content
+        </div>
+    </main>
 
-            <select id="langSelect">
-                <option value="html">html</option>
-                <option value="javascript">javascript</option>
-                <option value="css">css</option>
-            </select>
-            
-            <input id="searchTerm" type="text">
-            <button type="submit">Search</button>
-        </form>
-    </section>
 
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="./js/elements.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

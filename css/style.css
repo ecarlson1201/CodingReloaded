@@ -1,0 +1,14 @@
+header {
+    text-align: center;
+    display: block;
+    page-break-after: always;
+}
+
+form {
+    text-align: center;
+}
+
+main {
+    display: block;
+    clear: both;
+}
