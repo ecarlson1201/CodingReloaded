@@ -2,7 +2,7 @@ function getDataFromApi(searchTerm, callback) {
     const query = {
         part: 'snippet',
         q: searchTerm,
-        key: APIKEY,
+        key: YOUTUBEAPIKEY,
         maxResults: 4,
     }
     $.getJSON(YOUTUBE_SEARCH_URL, query, callback)
@@ -12,7 +12,7 @@ function getPageFromApi(searchTerm, callback, nextPage) {
     const query = {
         part: 'snippet',
         q: searchTerm,
-        key: APIKEY,
+        key: YOUTUBEAPIKEY,
         maxResults: 4,
         pageToken: nextPage
     }
@@ -47,5 +47,5 @@ function displayYoutubeSearchData(data) {
     }
     const results = data.items.map((item, index) => renderResult(item));
     $('.js-youtube').html(results);
-    $('.js-nav-buttons').html(renderButtons());
+    $('.js-nav-buttons-youtube').html(renderButtons());
 }
