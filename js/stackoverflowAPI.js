@@ -21,7 +21,6 @@ function renderStackOverflowResults(result){
 }
 
 function displayStackOverflowData(data) {
-    console.log(data)
     searchData = data
 
     const results = data.items.map((item, index) => renderStackOverflowResults(item));

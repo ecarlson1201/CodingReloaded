@@ -6,8 +6,12 @@ const YOUTUBEAPIKEY = 'AIzaSyCjQeMa3AVf38yIkwZAu3icqvSpxwGhmfw';
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
 
 const STACKOVERFLOWAPIKEY = '29zUgiAwLvCohKmNY5HyWw((';
-const STACKOVERFLOW_SEARCH_URL = 'https://api.stackexchange.com/2.2/search'
+const STACKOVERFLOW_SEARCH_URL = 'https://api.stackexchange.com/2.2/search';
 
+const MOZILLA_SEARCH_URL = 'https://developer.mozilla.org/en-US/search.json';
+
+const REDDIT_SEARCH_URL = 'https://reddit.com/r/dailyprogrammer/search.json';
+const REDDITAPIKEY = 'SSZt5wc_F2m2J9KSqwwfZnR5AV4';
 
 let query = '';
 let nextPageFunc = null;

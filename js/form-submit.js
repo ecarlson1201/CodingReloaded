@@ -6,6 +6,8 @@ function handleFormSubmit() {
         query = queryTarget
         getDataFromApi(query, displayYoutubeSearchData)
         getDataFromStackOverflow(query, displayStackOverflowData)
+        getDataFromMozilla(query, displayMozillaData)
+        getDataFromReddit(query, displayRedditData)
     })
 }
 
