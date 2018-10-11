@@ -6,7 +6,7 @@ const YOUTUBEAPIKEY = 'AIzaSyCjQeMa3AVf38yIkwZAu3icqvSpxwGhmfw';
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
 
 const STACKOVERFLOWAPIKEY = '29zUgiAwLvCohKmNY5HyWw((';
-const STACKOVERFLOW_SEARCH_URL = 'stackoverflow.com'
+const STACKOVERFLOW_SEARCH_URL = 'https://api.stackexchange.com/2.2/search'
 
 
 let query = '';
