@@ -1,8 +1,25 @@
 function getDataFromMozilla(searchTerm, callback) {
+    console.log('hello world')
     const query = {
-        q: searchTerm,
+        url: MOZILLA_SEARCH_URL,
+        headers: {
+            'Access-Control-Allow-Origin': true,
+            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+            'accept-language': 'en-US,en;q=0.9',
+            'cache-control': 'no-cache',
+            'pragma': 'no-cache',
+            'upgrade-insecure-requests': 1,
+        },
+        contentType: 'application/json',
+        data: {
+            q: searchTerm
+        }
     }
-    $.getJSON(MOZILLA_SEARCH_URL, query, callback)
+    $.ajax(query)
+    .done(callback)
+    .fail(function(fail){
+        console.log(fail)
+    })
 }
 
 function renderMozillaResults(result){
