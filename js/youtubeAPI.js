@@ -3,7 +3,7 @@ function getDataFromApi(searchTerm, callback) {
         part: 'snippet',
         q: searchTerm,
         key: YOUTUBEAPIKEY,
-        maxResults: 4,
+        maxResults: 3,
     }
     $.getJSON(YOUTUBE_SEARCH_URL, query, callback)
 }

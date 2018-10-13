@@ -1,40 +1,22 @@
 function getDataFromMozilla(searchTerm, callback) {
-    console.log('hello world')
     const query = {
-        url: MOZILLA_SEARCH_URL,
-        headers: {
-            'Access-Control-Allow-Origin': true,
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-            'accept-language': 'en-US,en;q=0.9',
-            'cache-control': 'no-cache',
-            'pragma': 'no-cache',
-            'upgrade-insecure-requests': 1,
-        },
-        contentType: 'application/json',
-        data: {
-            q: searchTerm
-        }
+        q: searchTerm,
+
     }
-    $.ajax(query)
-    .done(callback)
-    .fail(function(fail){
-        console.log(fail)
-    })
+    $.getJSON(MOZILLA_SEARCH_URL, query, callback)
 }
 
 function renderMozillaResults(result){
     return `
     <div>
         <h3>
-        <a class='js-result-name' href=${result.link}' target='_blank'>${result.title}</a></h2>
+        <a class='js-result-name' href='https://developer.mozilla.org/en-US/docs/${result.slug}' target='_blank'>${result.title}</a></h2>
         </h3>
+        <p>"...${result.excerpt}..."</p>
     </div>
     `
 }
 
 function displayMozillaData(data) {
-    console.log(data)
-    searchData = data
-    const results = data.items.map((item, index) => renderMozillaResults(item));
-    $('.js-mozilla').html(results);
+    $('.js-mozilla').html(renderMozillaResults(data.documents[0]));
 }

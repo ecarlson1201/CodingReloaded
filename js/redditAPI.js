@@ -3,6 +3,7 @@ function getDataFromReddit(searchTerm, callback) {
         q: searchTerm,
         client_id: REDDITAPIKEY,
         restrict_sr: 1,
+        limit: 5
     }
     $.getJSON(REDDIT_SEARCH_URL, query, callback)
 }
