@@ -43,14 +43,13 @@ function renderStackOverflowResults(result){
 
 function renderForumButtons() {
     return `
-    <button class="js-nav-buttons-stackoverflow" onclick="displayPrevPage()">Prev Page</button>
-    <button onclick="displayNextPage()" class="js-nav-buttons-stackoverflow">Next Page</button>
+    <button onclick="displayPrevPage()">Prev Page</button>
+    <button onclick="displayNextPage()">Next Page</button>
     `;
 };
 
 function displayStackOverflowData(data) {
     searchData = data;
-    console.log(data);
     const results = data.items.map((item, index) => renderStackOverflowResults(item));
     $('.js-stackoverflow').html(results);
     $('.js-nav-buttons-stackoverflow').html(renderForumButtons())

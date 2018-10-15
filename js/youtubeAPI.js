@@ -32,7 +32,8 @@ function renderResult(result) {
 
 function renderButtons() {
     return `
-    <button id="js-prev" onclick="prevPageFunc()">Prev Page</button><button onclick="nextPageFunc()" id="js-next">Next Page</button>
+    <button onclick="prevPageFunc()">Prev Page</button>
+    <button onclick="nextPageFunc()">Next Page</button>
     `;
 }
 

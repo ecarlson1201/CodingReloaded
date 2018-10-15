@@ -19,3 +19,6 @@ let prevPageFunc = null;
 let searchData = '';
 let clicked = '';
 let pageNum = 1;
+let displayRedditNextPage = null;
+let displayRedditPrevPage = null;
+let currentCount = 0;
