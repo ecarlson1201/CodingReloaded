@@ -13,7 +13,7 @@ function getPageFromApi(searchTerm, callback, nextPage) {
         part: 'snippet',
         q: searchTerm,
         key: YOUTUBEAPIKEY,
-        maxResults: 4,
+        maxResults: 3,
         pageToken: nextPage
     }
     $.getJSON(YOUTUBE_SEARCH_URL, query, callback)
@@ -33,7 +33,6 @@ function renderResult(result) {
 function renderButtons() {
     return `
     <button id="js-prev" onclick="prevPageFunc()">Prev Page</button><button onclick="nextPageFunc()" id="js-next">Next Page</button>
-    <p>Total Results: ${searchData.pageInfo.totalResults}</p>
     `;
 }
 

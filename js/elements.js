@@ -10,7 +10,7 @@ const STACKOVERFLOW_SEARCH_URL = 'https://api.stackexchange.com/2.2/search';
 
 const MOZILLA_SEARCH_URL = 'https://cors-anywhere.herokuapp.com/https://developer.mozilla.org/en-US/search.json';
 
-const REDDIT_SEARCH_URL = 'http://www.reddit.com/r/dailyprogrammer/search.json';
+const REDDIT_SEARCH_URL = 'http://www.reddit.com/r/programmingchallenges/search.json';
 const REDDITAPIKEY = 'SSZt5wc_F2m2J9KSqwwfZnR5AV4';
 
 let query = '';
@@ -18,3 +18,4 @@ let nextPageFunc = null;
 let prevPageFunc = null;
 let searchData = '';
 let clicked = '';
+let pageNum = 1;
