@@ -25,11 +25,7 @@
     padding-right: 1.04166666%;
 }
 
-.col-6{
-    width: 50%;
-}
-
-.col-12 {
+.col-6, .col-12 {
     width: 100%;
 }
 
