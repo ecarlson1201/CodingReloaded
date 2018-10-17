@@ -10,23 +10,15 @@ function getDataFromStackOverflow(searchTerm, callback) {
     $.getJSON(STACKOVERFLOW_SEARCH_URL, query, callback);
 };
 
-function getNextPageNum(){
-    pageNum++;
-};
-
-function getPrevPageNum(){
-    if(pageNum > 1){
-        pageNum--
-    };
-};
-
 function displayNextPage(){
-    getNextPageNum();
+    pageNum++;
     getDataFromStackOverflow(query, displayStackOverflowData);
 };
 
 function displayPrevPage(){
-    getPrevPageNum();
+    if(pageNum > 1){
+        pageNum--
+    };
     getDataFromStackOverflow(query, displayStackOverflowData);
 };
 

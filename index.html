@@ -12,50 +12,53 @@
 
 <body>
     <header role="banner">
-        <div class="col-12 row">
-            <h1>Coding Reloaded</h1>
-            <form class="row" id="js-submit" action="submit">
+        <div class="row">
+            <div class="col-12">
+                <h1>CODING RELOADED</h1>
+                <h3>Search Helper For Coding Beginners</h3>
+                <form class="row" id="js-submit" action="submit">
 
-                <select id="langSelect">
-                    <option value="html">html</option>
-                    <option value="javascript">javascript</option>
-                    <option value="css">css</option>
-                </select>
+                    <select id="langSelect">
+                        <option value="html">html</option>
+                        <option value="javascript">javascript</option>
+                        <option value="css">css</option>
+                    </select>
 
-                <input id="searchTerm" type="text" required>
-                <button type="submit">Search</button>
-            </form>
+                    <input id="searchTerm" type="text" required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </header>
 
     <main role="main">
         <div class="row">
             <div class="col-6">
-                <div class="section">
+                <div class="section hidden">
                     <h2>Basic Info</h2>
-                    <div class="js-mozilla"></div>
+                    <div class="js-mozilla results"></div>
                 </div>
             </div>
             <div class="col-6">
-                <div class="section">
+                <div class="section hidden">
                     <h2>Forums</h2>
-                    <div class="js-stackoverflow"></div>
+                    <div class="js-stackoverflow results"></div>
                     <div class="js-nav-buttons-stackoverflow"></div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="section">
+                <div class="section hidden">
                     <h2>Videos</h2>
-                    <div class="js-youtube"></div>
+                    <div class="js-youtube results"></div>
                     <div class="js-nav-buttons-youtube"></div>
                 </div>
             </div>
             <div class="col-6">
-                <div class="section">
+                <div class="section hidden">
                     <h2>Exercises</h2>
-                    <div class="js-reddit"></div>
+                    <div class="js-reddit results"></div>
                     <div class="js-nav-buttons-reddit"></div>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 function getDataFromMozilla(searchTerm, callback) {
     const query = {
         q: searchTerm,
-
     }
     $.getJSON(MOZILLA_SEARCH_URL, query, callback)
 }

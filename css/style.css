@@ -1,7 +1,8 @@
-/*html{
+/*body{
     background-image: url('../assets/blogging-business-coding-48606.jpg');
     background-size: cover;
     height: 100%;
+    background-attachment: fixed;
 }
 
 header {
@@ -18,5 +19,8 @@ form {
     margin-top: 10px;
     padding: 3px;
 }
-
 */
+
+.hidden{
+    display: none;
+}
