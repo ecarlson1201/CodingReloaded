@@ -30,13 +30,6 @@ function renderResult(result) {
     `;
 };
 
-function renderButtons() {
-    return `
-    <button onclick="prevPageFunc()">Prev Page</button>
-    <button onclick="nextPageFunc()">Next Page</button>
-    `;
-};
-
 function displayYoutubeSearchData(data) {
     searchData = data;
     nextPageFunc = function () {
@@ -47,5 +40,4 @@ function displayYoutubeSearchData(data) {
     };
     const results = data.items.map((item, index) => renderResult(item));
     $('.js-youtube').html(results);
-    $('.js-nav-buttons-youtube').html(renderButtons());
 };

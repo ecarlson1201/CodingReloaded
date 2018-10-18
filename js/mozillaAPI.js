@@ -18,6 +18,17 @@ function renderMozillaResults(result) {
 };
 
 function displayMozillaData(data) {
-    console.log(JSON.stringify(data.documents[0]));
-    $('.js-mozilla').html(renderMozillaResults(data.documents[0]));
+    searchData = data;
+    MOZILLA_RESULTS.html('');
+
+    if (data.documents.length > 0) {
+        for (i = 0; i < 3; i++) {
+            const results = searchData.documents[i];
+            MOZILLA_RESULTS.append(renderMozillaResults(results));
+        }
+    }
+    else {
+        MOZILLA_RESULTS.html(`Oops, no results found for ${TERM.val()}.`)
+    };
+    
 };

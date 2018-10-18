@@ -7,11 +7,16 @@ const RESULTS = $('.results');
 const YOUTUBEAPIKEY = 'AIzaSyCjQeMa3AVf38yIkwZAu3icqvSpxwGhmfw';
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
 
+const STACKOVERFLOW_BUTTONS = $('.js-nav-buttons-stackoverflow');
+const STACKOVERFLOW_RESULTS = $('.js-stackoverflow');
 const STACKOVERFLOWAPIKEY = '29zUgiAwLvCohKmNY5HyWw((';
 const STACKOVERFLOW_SEARCH_URL = 'https://api.stackexchange.com/2.2/search';
 
+const MOZILLA_RESULTS = $('.js-mozilla');
 const MOZILLA_SEARCH_URL = 'https://cors-anywhere.herokuapp.com/https://developer.mozilla.org/en-US/search.json';
 
+const REDDIT_BUTTONS = $('.js-nav-buttons-reddit');
+const REDDIT_RESULTS = $('.js-reddit');
 const REDDIT_SEARCH_URL = 'https://www.reddit.com/r/programmingchallenges/search.json';
 const REDDITAPIKEY = 'SSZt5wc_F2m2J9KSqwwfZnR5AV4';
 

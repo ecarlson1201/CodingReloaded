@@ -33,17 +33,15 @@ function renderStackOverflowResults(result) {
     `;
 };
 
-function renderForumButtons() {
-    return `
-    <button onclick="displayPrevPage()">Prev Page</button>
-    <button onclick="displayNextPage()">Next Page</button>
-    `;
-};
-
 function displayStackOverflowData(data) {
     searchData = data;
-    console.log(searchData)
     const results = data.items.map((item, index) => renderStackOverflowResults(item));
-    $('.js-stackoverflow').html(results);
-    $('.js-nav-buttons-stackoverflow').html(renderForumButtons())
+
+    if (data.items.length > 0) {
+        STACKOVERFLOW_RESULTS.html(results);
+        STACKOVERFLOW_BUTTONS.removeClass('hidden');
+    }
+    else {
+        STACKOVERFLOW_RESULTS.html(`Oops, no results found for ${TERM.val()}.`)
+    };
 };

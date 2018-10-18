@@ -43,7 +43,10 @@
                 <div class="section hidden">
                     <h2>Forums</h2>
                     <div class="js-stackoverflow results"></div>
-                    <div class="js-nav-buttons-stackoverflow"></div>
+                    <div class="js-nav-buttons-stackoverflow hidden">
+                        <button onclick="displayPrevPage()">Prev Page</button>
+                        <button onclick="displayNextPage()">Next Page</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,14 +55,20 @@
                 <div class="section hidden">
                     <h2>Videos</h2>
                     <div class="js-youtube results"></div>
-                    <div class="js-nav-buttons-youtube"></div>
+                    <div class="js-nav-buttons-youtube">
+                        <button onclick="prevPageFunc()">Prev Page</button>
+                        <button onclick="nextPageFunc()">Next Page</button>
+                    </div>
                 </div>
             </div>
             <div class="col-6">
                 <div class="section hidden">
                     <h2>Exercises</h2>
                     <div class="js-reddit results"></div>
-                    <div class="js-nav-buttons-reddit"></div>
+                    <div class="js-nav-buttons-reddit">
+                        <button onclick="displayRedditPrevPage()">Prev Page</button>
+                        <button onclick="displayRedditNextPage()">Next Page</button>
+                    </div>
                 </div>
             </div>
         </div>

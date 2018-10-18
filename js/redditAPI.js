@@ -42,13 +42,6 @@ function renderRedditResults(result) {
     `;
 };
 
-function renderRedditButtons() {
-    return `
-    <button onclick="displayRedditPrevPage()">Prev Page</button>
-    <button onclick="displayRedditNextPage()">Next Page</button>
-    `;
-};
-
 function displayRedditData(data) {
     searchData = data;
     displayRedditNextPage = function () {
@@ -61,6 +54,13 @@ function displayRedditData(data) {
     };
 
     const results = data.data.children.map((item, index) => renderRedditResults(item));
-    $('.js-reddit').html(results);
-    $('.js-nav-buttons-reddit').html(renderRedditButtons());
+    
+    if(data.data.children.length > 0){
+        REDDIT_RESULTS.html(results);
+        REDDIT_BUTTONS.removeClass('hidden');
+    }
+
+    else{
+    REDDIT_RESULTS.html(`Oops, no results found for ${TERM.val()}.`)
+    };
 };
