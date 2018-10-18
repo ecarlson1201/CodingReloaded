@@ -1,11 +1,12 @@
 function getDataFromMozilla(searchTerm, callback) {
     const query = {
         q: searchTerm,
-    }
+    };
     $.getJSON(MOZILLA_SEARCH_URL, query, callback)
-}
+        .error(function () { alert("error"); });
+};
 
-function renderMozillaResults(result){
+function renderMozillaResults(result) {
     return `
     <div>
         <h3>
@@ -13,9 +14,10 @@ function renderMozillaResults(result){
         </h3>
         <p>"...${result.excerpt}..."</p>
     </div>
-    `
-}
+    `;
+};
 
 function displayMozillaData(data) {
+    console.log(JSON.stringify(data.documents[0]));
     $('.js-mozilla').html(renderMozillaResults(data.documents[0]));
-}
+};

@@ -7,7 +7,7 @@ function handleFormSubmit() {
         RESULTS.html('')
         getDataFromApi(query, displayYoutubeSearchData);
         getDataFromStackOverflow(query, displayStackOverflowData);
-        getDataFromMozilla(query, displayMozillaData);
+        getDataFromMozilla(TERM.val(), displayMozillaData);
         getDataFromReddit(TERM.val(), displayRedditData);
         SECTION.removeClass('hidden');
     });

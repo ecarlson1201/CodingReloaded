@@ -4,9 +4,9 @@ function getDataFromApi(searchTerm, callback) {
         q: searchTerm,
         key: YOUTUBEAPIKEY,
         maxResults: 3,
-    }
-    $.getJSON(YOUTUBE_SEARCH_URL, query, callback)
-}
+    };
+    $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
+};
 
 function getPageFromApi(searchTerm, callback, nextPage) {
     const query = {
@@ -15,9 +15,9 @@ function getPageFromApi(searchTerm, callback, nextPage) {
         key: YOUTUBEAPIKEY,
         maxResults: 3,
         pageToken: nextPage
-    }
-    $.getJSON(YOUTUBE_SEARCH_URL, query, callback)
-}
+    };
+    $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
+};
 
 function renderResult(result) {
     return `
@@ -28,24 +28,24 @@ function renderResult(result) {
         <img alt='thumbnail' class="js-thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'>
     </div><br>
     `;
-}
+};
 
 function renderButtons() {
     return `
     <button onclick="prevPageFunc()">Prev Page</button>
     <button onclick="nextPageFunc()">Next Page</button>
     `;
-}
+};
 
 function displayYoutubeSearchData(data) {
-    searchData = data
+    searchData = data;
     nextPageFunc = function () {
         getPageFromApi(query, displayYoutubeSearchData, data.nextPageToken)
-    }
+    };
     prevPageFunc = function () {
         getPageFromApi(query, displayYoutubeSearchData, data.prevPageToken)
-    }
+    };
     const results = data.items.map((item, index) => renderResult(item));
     $('.js-youtube').html(results);
     $('.js-nav-buttons-youtube').html(renderButtons());
-}
+};

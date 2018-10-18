@@ -10,19 +10,19 @@ function getDataFromStackOverflow(searchTerm, callback) {
     $.getJSON(STACKOVERFLOW_SEARCH_URL, query, callback);
 };
 
-function displayNextPage(){
+function displayNextPage() {
     pageNum++;
     getDataFromStackOverflow(query, displayStackOverflowData);
 };
 
-function displayPrevPage(){
-    if(pageNum > 1){
+function displayPrevPage() {
+    if (pageNum > 1) {
         pageNum--
     };
     getDataFromStackOverflow(query, displayStackOverflowData);
 };
 
-function renderStackOverflowResults(result){
+function renderStackOverflowResults(result) {
     return `
     <div>
         <h3>
@@ -42,6 +42,7 @@ function renderForumButtons() {
 
 function displayStackOverflowData(data) {
     searchData = data;
+    console.log(searchData)
     const results = data.items.map((item, index) => renderStackOverflowResults(item));
     $('.js-stackoverflow').html(results);
     $('.js-nav-buttons-stackoverflow').html(renderForumButtons())
