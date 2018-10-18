@@ -1,4 +1,4 @@
-/*body{
+body{
     background-image: url('../assets/blogging-business-coding-48606.jpg');
     background-size: cover;
     height: 100%;
@@ -13,13 +13,36 @@ form {
     text-align: center;
 }
 
-.section{
-    background-color: rgb(238, 238, 238);
+h2{
+    display: inline-block;
+}
+
+.section {
+    text-align: center;
+    background-position:50% 50%;  
+    background-size: cover;
+    background-color: white;
     border-radius: 5px;
     margin-top: 10px;
-    padding: 3px;
+    padding: 10px;
 }
-*/
+
+.mozilla {
+    background-image: url('../assets/mozilla-thumbnail.png');
+}
+
+.stackoverflow {
+    background-image: url('../assets/stackoverflow-thumbnail.png');
+}
+
+.youtube {
+    background-image: url('../assets/youtube-thumbnail.png');
+    background-size: contain;
+}
+
+.reddit {
+    background-image: url('../assets/reddit-thumbnail.png');
+}
 
 .hidden{
     display: none;
