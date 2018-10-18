@@ -3,6 +3,7 @@ function handleFormSubmit() {
         event.preventDefault();
         const queryTarget = `${LANGUAGE.val() + ' ' + TERM.val()}`;
 
+        $('header').addClass('hidden')
         query = queryTarget;
         RESULTS.html('');
         REDDIT_BUTTONS.addClass('hidden');

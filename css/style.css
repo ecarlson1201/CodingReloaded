@@ -3,14 +3,29 @@ body{
     background-size: cover;
     height: 100%;
     background-attachment: fixed;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
 header {
     text-align: center;
+    color: aliceblue;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 form {
     text-align: center;
+    padding: 10px;
+}
+
+h1{
+    font-family: 'Loved by the King', cursive;
+    font-size: 700%;
+    margin: 0;
 }
 
 h2{
@@ -21,29 +36,84 @@ h2{
     text-align: center;
     background-position:50% 50%;  
     background-size: cover;
-    background-color: white;
+    color: aliceblue;
     border-radius: 5px;
     margin-top: 10px;
-    padding: 10px;
+    background-image: url('../assets/black_background.png');
+    transition-duration: 0.3s;
 }
 
-.mozilla {
-    background-image: url('../assets/mozilla-thumbnail.png');
+.mozilla:hover {
+    background-image: url('../assets/mozilla-thumbnail2.png');
 }
 
-.stackoverflow {
-    background-image: url('../assets/stackoverflow-thumbnail.png');
+.stackoverflow:hover {
+    background-image: url('../assets/stackoverflow-thumbnail3.png');
 }
 
-.youtube {
-    background-image: url('../assets/youtube-thumbnail.png');
-    background-size: contain;
+.youtube:hover {
+    background-image: url('../assets/youtube-thumbnail2.png');
+    background-size: contain, no-repeat;
 }
 
-.reddit {
-    background-image: url('../assets/reddit-thumbnail.png');
+.reddit:hover {
+    background-image: url('../assets/reddit-thumbnail2.png');
 }
 
 .hidden{
     display: none;
+}
+
+#logo{
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#langSelect{
+    font-family: 'Quicksand', sans-serif;
+    height: 50px;
+    font-size: large;
+    border-radius: 4px;
+}
+
+#langSelect:hover{
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: rgb(223, 233, 241);
+    transition-duration: 0.3s;
+    }
+
+#searchButton{
+    border: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-color: aliceblue;
+    height: 50px;
+    width: 80px;
+    font-size: large;
+    border-radius: 4px;
+}
+
+#searchButton:hover{
+    background-color: rgb(223, 233, 241);
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+#searchTerm{
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    height: 50px;
+    width: 250px;
+    border-radius: 4px;
+}
+
+#subtitle{
+    font-size: 200%;
 }
