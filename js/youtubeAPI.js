@@ -21,12 +21,13 @@ function getPageFromApi(searchTerm, callback, nextPage) {
 
 function renderResult(result) {
     return `
-    <div>
-        <h3>
-        <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>${result.snippet.title}</a></h3>
-        <a class='js-result-name' href='https://www.youtube.com/channel/${result.snippet.channelId}' target='_blank'>${result.snippet.channelTitle}</a><br>
-        <img alt='thumbnail' class="js-thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'>
-    </div><br>
+    <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>
+        <div class='link'>
+            <h3>${result.snippet.title}</h3>
+            <img alt='thumbnail' class="js-thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'><br>
+        </div>
+    </a>
+    <a class='js-result-name channel' href='https://www.youtube.com/channel/${result.snippet.channelId}' target='_blank'>${result.snippet.channelTitle}</a><br>
     `;
 };
 

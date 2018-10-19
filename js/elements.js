@@ -3,6 +3,9 @@ const LANGUAGE = $('#langSelect');
 const TERM = $('#searchTerm');
 const SECTION = $('.section');
 const RESULTS = $('.results');
+const HEADER = $('header');
+const MAIN = $('main');
+const NEW_SEARCH = $('#new-search');
 
 const YOUTUBEAPIKEY = 'AIzaSyCjQeMa3AVf38yIkwZAu3icqvSpxwGhmfw';
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";

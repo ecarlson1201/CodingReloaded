@@ -8,12 +8,12 @@ function getDataFromMozilla(searchTerm, callback) {
 
 function renderMozillaResults(result) {
     return `
-    <div>
-        <h3>
-        <a class='js-result-name' href='https://developer.mozilla.org/en-US/docs/${result.slug}' target='_blank'>${result.title}</a></h2>
-        </h3>
-        <p>"...${result.excerpt}..."</p>
-    </div>
+    <a class='js-result-name' href='https://developer.mozilla.org/en-US/docs/${result.slug}' target='_blank'>
+        <div class='link'>
+            <h3>${result.title}</h3>
+            <p>"...${result.excerpt}..."</p>
+        </div>
+    </a>
     `;
 };
 

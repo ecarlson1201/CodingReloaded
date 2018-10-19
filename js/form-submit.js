@@ -3,7 +3,8 @@ function handleFormSubmit() {
         event.preventDefault();
         const queryTarget = `${LANGUAGE.val() + ' ' + TERM.val()}`;
 
-        $('header').addClass('hidden')
+        HEADER.toggleClass('hidden');
+        NEW_SEARCH.toggleClass('hidden');
         query = queryTarget;
         RESULTS.html('');
         REDDIT_BUTTONS.addClass('hidden');
@@ -14,6 +15,13 @@ function handleFormSubmit() {
         getDataFromReddit(TERM.val(), displayRedditData);
         SECTION.removeClass('hidden');
     });
+};
+
+function newSearch(){
+    NEW_SEARCH.toggleClass('hidden');
+    HEADER.toggleClass('hidden');
+    SECTION.toggleClass('hidden');
+    TERM.val('');
 };
 
 handleFormSubmit();

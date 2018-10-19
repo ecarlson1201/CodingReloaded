@@ -24,12 +24,11 @@ function displayPrevPage() {
 
 function renderStackOverflowResults(result) {
     return `
-    <div>
-        <h3>
-        <a class='js-result-name' href=${result.link}' target='_blank'>${result.title}</a></h2>
-        </h3>
-    
-    </div>
+    <a class='js-result-name' href=${result.link}' target='_blank'>
+        <div class='link'>
+            <h3>${result.title}</h3>
+        </div>
+    </a>
     `;
 };
 

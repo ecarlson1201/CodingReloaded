@@ -1,4 +1,4 @@
-/*body{
+body{
     background-image: url('../assets/blogging-business-coding-48606.jpg');
     background-size: cover;
     height: 100%;
@@ -28,8 +28,18 @@ h1{
     margin: 0;
 }
 
-h2{
-    display: inline-block;
+h3{
+    margin: 0;
+    padding: 5px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.buttons{
+    margin: auto;
 }
 
 .section {
@@ -39,8 +49,9 @@ h2{
     color: aliceblue;
     border-radius: 5px;
     margin-top: 10px;
-    background-image: url('../assets/black_background.png');
+    background-image: url('../assets/white_background.png');
     transition-duration: 0.3s;
+    padding-bottom: 10px;
 }
 
 .mozilla:hover {
@@ -52,16 +63,37 @@ h2{
 }
 
 .youtube:hover {
-    background-image: url('../assets/youtube-thumbnail2.png');
+    background-image: url('../assets/youtube-thumbnail3.png');
     background-size: contain, no-repeat;
 }
 
 .reddit:hover {
-    background-image: url('../assets/reddit-thumbnail2.png');
+    background-image: url('../assets/reddit-thumbnail3.png');
 }
 
 .hidden{
     display: none;
+}
+
+.link{
+    border-radius: 3px;
+}
+
+.link:hover, a:hover{
+    cursor: pointer;
+    background-image: url('../assets/white_background.png');
+    color: black;
+    transition-duration: 0.2s;
+}
+
+.section-title{
+    background-image: url('../assets/black_background.png');
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.channel{
+    background-image: none !important;
 }
 
 #logo{
@@ -90,7 +122,7 @@ select:hover {
     transition-duration: 0.3s;
     }
 
-#searchButton{
+button{
     border: 0;
     font-family: 'Quicksand', sans-serif;
     background-color: aliceblue;
@@ -100,7 +132,7 @@ select:hover {
     border-radius: 4px;
 }
 
-#searchButton:hover{
+button:hover{
     background-color: rgb(223, 233, 241);
     transition-duration: 0.3s;
     cursor: pointer;
@@ -117,4 +149,10 @@ select:hover {
 #subtitle{
     font-size: 200%;
 }
-*/
+
+#new-search{
+    position: -webkit-sticky;
+    position: sticky;
+    width: 150px;
+    top: 0;
+}

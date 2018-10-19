@@ -34,11 +34,11 @@ function getPrevFromReddit(searchTerm, callback, before, count) {
 
 function renderRedditResults(result) {
     return `
-    <div>
-        <h3>
-        <a class='js-result-name' href='https://reddit.com/${result.data.permalink}' target='_blank'>${result.data.title}</a></h2>
-        </h3>
-    </div>
+    <a class='js-result-name' href='https://reddit.com/${result.data.permalink}' target='_blank'>
+        <div class='link'>
+            <h3>${result.data.title}</h3>
+        </div>
+    </a>
     `;
 };
 
