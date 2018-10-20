@@ -3,7 +3,7 @@ function getDataFromApi(searchTerm, callback) {
         part: 'snippet',
         q: searchTerm,
         key: YOUTUBEAPIKEY,
-        maxResults: 3,
+        maxResults: 4,
     };
     $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
 };
@@ -13,7 +13,7 @@ function getPageFromApi(searchTerm, callback, nextPage) {
         part: 'snippet',
         q: searchTerm,
         key: YOUTUBEAPIKEY,
-        maxResults: 3,
+        maxResults: 4,
         pageToken: nextPage
     };
     $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
@@ -21,13 +21,15 @@ function getPageFromApi(searchTerm, callback, nextPage) {
 
 function renderResult(result) {
     return `
-    <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>
-        <div class='link'>
-            <h3>${result.snippet.title}</h3>
-            <img alt='thumbnail' class="js-thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'><br>
-        </div>
-    </a>
-    <a class='js-result-name channel' href='https://www.youtube.com/channel/${result.snippet.channelId}' target='_blank'>${result.snippet.channelTitle}</a><br>
+    <div class='youtube-table'>
+        <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>
+            <div class='link'>
+             <p>${result.snippet.title}</p>
+             <img alt='thumbnail' class="js-thumbnail thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'><br>
+             </div>
+         </a>
+        <a class='js-result-name channel' href='https://www.youtube.com/channel/${result.snippet.channelId}' target='_blank'>${result.snippet.channelTitle}</a><br>
+    </div>
     `;
 };
 

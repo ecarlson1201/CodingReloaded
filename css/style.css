@@ -31,6 +31,7 @@ h1{
 h3{
     margin: 0;
     padding: 5px;
+    font-weight: normal;
 }
 
 a{
@@ -38,8 +39,16 @@ a{
     text-decoration: none;
 }
 
+p::selection{
+    background-color: none;
+}
+
 .buttons{
     margin: auto;
+}
+
+.table{
+    display: table;
 }
 
 .section {
@@ -49,26 +58,26 @@ a{
     color: aliceblue;
     border-radius: 5px;
     margin-top: 10px;
-    background-image: url('../assets/white_background.png');
+    background-image: url('../assets/black_background2.png');
     transition-duration: 0.3s;
     padding-bottom: 10px;
 }
 
 .mozilla:hover {
-    background-image: url('../assets/mozilla-thumbnail2.png');
+    background-image: url('../assets/mozilla-thumbnail4.png');
 }
 
 .stackoverflow:hover {
-    background-image: url('../assets/stackoverflow-thumbnail3.png');
+    background-image: url('../assets/stackoverflow-thumbnail4.png');
 }
 
 .youtube:hover {
-    background-image: url('../assets/youtube-thumbnail3.png');
+    background-image: url('../assets/youtube-thumbnail4.png');
     background-size: contain, no-repeat;
 }
 
 .reddit:hover {
-    background-image: url('../assets/reddit-thumbnail3.png');
+    background-image: url('../assets/reddit-thumbnail4.png');
 }
 
 .hidden{
@@ -79,11 +88,12 @@ a{
     border-radius: 3px;
 }
 
-.link:hover, a:hover{
+.link:hover, a:hover, h3:hover{
     cursor: pointer;
     background-image: url('../assets/white_background.png');
     color: black;
     transition-duration: 0.2s;
+    font-weight: bold;
 }
 
 .section-title{
@@ -94,6 +104,16 @@ a{
 
 .channel{
     background-image: none !important;
+}
+
+.youtube-table{
+    display: inline-block;
+    width: 49%;
+}
+
+.thumbnail{
+    border: 1px solid white;
+    border-radius: 3px;
 }
 
 #logo{
@@ -150,9 +170,20 @@ button:hover{
     font-size: 200%;
 }
 
+#subtitle:hover{
+    background-image: none;
+    color: aliceblue;
+    font-weight: normal;
+    cursor: auto;
+}
+
 #new-search{
     position: -webkit-sticky;
     position: sticky;
     width: 150px;
     top: 0;
+}
+
+#mozilla-titles{
+    font-weight: normal;
 }
