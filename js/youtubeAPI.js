@@ -23,8 +23,8 @@ function renderResult(result) {
     return `
     <div class='youtube-table'>
         <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>
-            <div class='link'>
-             <p>${result.snippet.title}</p>
+            <div class='video link'>
+             <p class='vid-title'>${result.snippet.title}</p>
              <img alt='thumbnail' class="js-thumbnail thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'><br>
              </div>
          </a>

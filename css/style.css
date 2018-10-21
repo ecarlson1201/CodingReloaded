@@ -88,6 +88,14 @@ p::selection{
     border-radius: 3px;
 }
 
+.vid-title{
+    font-weight: normal;
+}
+
+.video:hover{
+    background-image: url('../assets/gray_background.png');
+}
+
 .link:hover, a:hover, h3:hover{
     cursor: pointer;
     font-weight: bold;
@@ -104,13 +112,16 @@ p::selection{
     background-image: none !important;
 }
 
+.channel:hover{
+    text-decoration: none;
+}
+
 .youtube-table{
     display: inline-block;
     width: 49%;
 }
 
 .thumbnail{
-    border: 1px solid white;
     border-radius: 3px;
 }
 
