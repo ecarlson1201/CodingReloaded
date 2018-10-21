@@ -92,7 +92,7 @@ p::selection{
     font-weight: normal;
 }
 
-.video:hover{
+.youtube-table:hover{
     background-image: url('../assets/gray_background.png');
 }
 
@@ -106,10 +106,6 @@ p::selection{
     background-image: url('../assets/black_background.png');
     padding-top: 7px;
     padding-bottom: 7px;
-}
-
-.channel{
-    background-image: none !important;
 }
 
 .channel:hover{
