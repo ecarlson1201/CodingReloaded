@@ -106,6 +106,8 @@ p::selection{
     background-image: url('../assets/black_background.png');
     padding-top: 7px;
     padding-bottom: 7px;
+    font-family: 'Loved by the King', cursive;
+    font-size: xx-large;
 }
 
 .channel:hover{
