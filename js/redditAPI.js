@@ -44,6 +44,11 @@ function renderRedditResults(result) {
 
 function displayRedditData(data) {
     searchData = data;
+
+    REDDIT_RESULTS.ready(function() {
+        $('#load-reddit').addClass('hidden');
+    });
+
     displayRedditNextPage = function () {
         currentCount += data.data.dist
         getNextFromReddit(TERM.val(), displayRedditData, data.data.after, currentCount);

@@ -58,7 +58,7 @@ p::selection{
     color: aliceblue;
     border-radius: 5px;
     margin-top: 10px;
-    background-image: url('../assets/black_background2.png');
+    background-image: url('../assets/black_background3.png');
     transition-duration: 0.3s;
     padding-bottom: 10px;
 }
@@ -94,6 +94,8 @@ p::selection{
 
 .youtube-table:hover{
     background-image: url('../assets/gray_background.png');
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .link:hover, a:hover, h3:hover{
@@ -106,8 +108,6 @@ p::selection{
     background-image: url('../assets/black_background.png');
     padding-top: 7px;
     padding-bottom: 7px;
-    font-family: 'Loved by the King', cursive;
-    font-size: xx-large;
 }
 
 .channel:hover{
@@ -194,4 +194,20 @@ button:hover{
 
 .mozilla-titles{
     font-weight: normal;
+}
+
+.loading {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #555555;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    left: 47%;
+    position: relative;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

@@ -34,6 +34,11 @@ function renderStackOverflowResults(result) {
 
 function displayStackOverflowData(data) {
     searchData = data;
+
+    STACKOVERFLOW_RESULTS.ready(function() {
+        $('#load-stackoverflow').addClass('hidden');
+    });
+
     const results = data.items.map((item, index) => renderStackOverflowResults(item));
 
     if (data.items.length > 0) {

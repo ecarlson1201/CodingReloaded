@@ -6,9 +6,11 @@ const RESULTS = $('.results');
 const HEADER = $('header');
 const MAIN = $('main');
 const NEW_SEARCH = $('#new-search');
+const LOADING = $('.loading');
 
 const YOUTUBEAPIKEY = 'AIzaSyCjQeMa3AVf38yIkwZAu3icqvSpxwGhmfw';
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
+const YOUTUBE_RESULTS = $('.js-youtube-results');
 
 const STACKOVERFLOW_BUTTONS = $('.js-nav-buttons-stackoverflow');
 const STACKOVERFLOW_RESULTS = $('.js-stackoverflow');

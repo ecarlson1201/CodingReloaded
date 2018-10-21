@@ -3,6 +3,7 @@ function handleFormSubmit() {
         event.preventDefault();
         const queryTarget = `${LANGUAGE.val() + ' ' + TERM.val()}`;
 
+        LOADING.removeClass('hidden');
         HEADER.toggleClass('hidden');
         NEW_SEARCH.toggleClass('hidden');
         query = queryTarget;

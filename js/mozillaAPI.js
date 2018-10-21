@@ -21,6 +21,10 @@ function displayMozillaData(data) {
     searchData = data;
     MOZILLA_RESULTS.html('');
 
+    MOZILLA_RESULTS.ready(function() {
+        $('#load-mozilla').addClass('hidden');
+    });
+
     if (data.documents.length > 0) {
         for (i = 0; i < 3; i++) {
             const results = searchData.documents[i];

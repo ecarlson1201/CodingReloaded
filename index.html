@@ -17,10 +17,10 @@
     <header role="banner">
         <div class="row">
             <div class="col-12">
-                <img src="./assets/hashtag-logo-title2.png" id="logo" alt="hashtag-logo">
+                <img src="./assets/hashtag-logo-title3.png" id="logo" alt="hashtag-logo">
                 <h1>CODING RELOADED</h1>
                 <h3 id="subtitle">Search Helper For Coding Beginners</h3>
-                <form class="row" id="js-submit" action="submit">
+                <form class="row" id="js-submit" action="submit" role="search">
 
                     <select id="langSelect">
                         <option value="html">html</option>
@@ -39,39 +39,47 @@
         <button id="new-search" onclick="newSearch()" class="hidden">New Search</button>
         <div class="row">
             <div class="col-12">
-                <div class="mozilla section hidden">
+                <div class="mozilla section hidden" role="article">
                     <h2 class="section-title">General Info From Mozilla</h2>
                     <div class="js-mozilla results"></div>
+
+                    <div class="loading" id="load-mozilla"></div>
                 </div>
             </div>
             <div class="col-12">
-                <div class="stackoverflow section hidden">
+                <div class="stackoverflow section hidden" role="article">
                     <h2 class="section-title">Forums From Stack Overflow</h2>
                     <div class="js-stackoverflow results"></div>
                     <div class="js-nav-buttons-stackoverflow buttons hidden">
                         <button onclick="displayPrevPage()">Prev</button>
                         <button onclick="displayNextPage()">Next</button>
                     </div>
+
+                    <div class="loading" id="load-stackoverflow"></div>
                 </div>
             </div>
             <div class="col-12">
-                <div class="reddit section hidden">
+                <div class="reddit section hidden" role="article">
                     <h2 class="section-title">Exercises From Reddit</h2>
                     <div class="js-reddit results"></div>
                     <div class="js-nav-buttons-reddit buttons">
                         <button onclick="displayRedditPrevPage()">Prev</button>
                         <button onclick="displayRedditNextPage()">Next</button>
                     </div>
+
+                    <div class="loading" id="load-reddit"></div>
                 </div>
             </div>
             <div class="col-12">
-                <div class="youtube section hidden">
+                <div class="youtube section hidden" role="article">
                     <h2 class="section-title">Videos From Youtube</h2>
                     <div class="js-youtube results"></div>
                     <div class="js-nav-buttons-youtube buttons">
                         <button onclick="prevPageFunc()">Prev</button>
                         <button onclick="nextPageFunc()">Next</button>
                     </div>
+
+                    <div class="loading" id="load-youtube"></div>
                 </div>
             </div>
         </div>

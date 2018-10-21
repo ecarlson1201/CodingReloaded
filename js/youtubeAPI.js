@@ -22,7 +22,7 @@ function getPageFromApi(searchTerm, callback, nextPage) {
 function renderResult(result) {
     return `
     <div class='youtube-table'>
-        <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>
+        <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}'>
             <div class='video link'>
              <p class='vid-title'>${result.snippet.title}</p>
              <img alt='thumbnail' class="js-thumbnail thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'><br>
@@ -35,6 +35,11 @@ function renderResult(result) {
 
 function displayYoutubeSearchData(data) {
     searchData = data;
+
+    YOUTUBE_RESULTS.ready(function() {
+        $('#load-youtube').addClass('hidden');
+    });
+
     nextPageFunc = function () {
         getPageFromApi(query, displayYoutubeSearchData, data.nextPageToken)
     };
