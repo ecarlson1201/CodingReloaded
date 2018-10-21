@@ -91,6 +91,7 @@ p::selection{
 .link:hover, a:hover, h3:hover{
     cursor: pointer;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .section-title{
@@ -172,6 +173,7 @@ button:hover{
     color: aliceblue;
     font-weight: normal;
     cursor: auto;
+    text-decoration: none;
 }
 
 #new-search{
@@ -181,6 +183,6 @@ button:hover{
     top: 0;
 }
 
-#mozilla-titles{
+.mozilla-titles{
     font-weight: normal;
 }

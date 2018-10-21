@@ -10,7 +10,7 @@ function renderMozillaResults(result) {
     return `
     <a class='js-result-name' href='https://developer.mozilla.org/en-US/docs/${result.slug}' target='_blank'>
         <div class='link'>
-            <h2 id='mozilla-titles'>${result.title}</h2>
+            <h2 class='mozilla-titles'>${result.title}</h2>
             <p>"...${result.excerpt}..."</p>
         </div>
     </a>
