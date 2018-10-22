@@ -211,3 +211,26 @@ button:hover{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+@media only screen and (max-width: 450px){
+    
+    h1{
+        text-shadow: 2px 2px 0 black
+    }
+    
+    button{
+        height: 25px;
+        font-size: medium;
+        margin: 10px;
+    }
+    
+    #langSelect{
+        height: 25px;
+        margin: 10px;
+        font-size: medium;
+    }
+
+    #subtitle{
+        text-shadow: 1px 1px 0 black;
+    }
+}
