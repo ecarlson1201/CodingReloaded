@@ -3,7 +3,6 @@ function getDataFromMozilla(searchTerm, callback) {
         q: searchTerm,
     };
     $.getJSON(MOZILLA_SEARCH_URL, query, callback)
-        .error(function () { alert("error"); });
 };
 
 function renderMozillaResults(result) {
