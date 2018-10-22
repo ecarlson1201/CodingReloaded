@@ -33,6 +33,20 @@ function renderResult(result) {
     `;
 };
 
+function renderMobileResult(result){
+    return `
+    <div class='youtube-table'>
+        <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>
+            <div class='video link'>
+             <p class='vid-title'>${result.snippet.title}</p>
+             <img alt='thumbnail' class="js-thumbnail thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'><br>
+             </div>
+         </a>
+        <a class='js-result-name channel' href='https://www.youtube.com/channel/${result.snippet.channelId}' target='_blank'>${result.snippet.channelTitle}</a><br>
+    </div>
+    `;
+}
+
 function displayYoutubeSearchData(data) {
     searchData = data;
     modalData = data;
@@ -47,7 +61,14 @@ function displayYoutubeSearchData(data) {
     prevPageFunc = function () {
         getPageFromApi(query, displayYoutubeSearchData, data.prevPageToken)
     };
-    const results = data.items.map((item, index) => renderResult(item));
-    $('.js-youtube').html(results);
-    displayModal();
+    
+    if($(window).width() > 500){
+        const results = data.items.map((item, index) => renderResult(item));
+        $('.js-youtube').html(results);
+        displayModal();
+    }
+    else{
+        const results = data.items.map((item, index) => renderMobileResult(item));
+        $('.js-youtube').html(results);
+    };
 };

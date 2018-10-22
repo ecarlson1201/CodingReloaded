@@ -29,10 +29,10 @@ function displayMozillaData(data) {
         for (i = 0; i < 3; i++) {
             const results = searchData.documents[i];
             MOZILLA_RESULTS.append(renderMozillaResults(results));
-        }
+        };
     }
     else {
-        MOZILLA_RESULTS.html(`Oops, no results found for ${TERM.val()}.`)
+        MOZILLA_RESULTS.html(`Oops, no results found for ${TERM.val()}.`);
     };
     
 };

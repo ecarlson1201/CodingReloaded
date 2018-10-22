@@ -25,9 +25,7 @@ function displayPrevPage() {
 function renderStackOverflowResults(result) {
     return `
     <a class='js-result-name' href=${result.link}' target='_blank'>
-        <div class='link'>
             <h3>${result.title}</h3>
-        </div>
     </a>
     `;
 };

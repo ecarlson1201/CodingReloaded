@@ -35,9 +35,7 @@ function getPrevFromReddit(searchTerm, callback, before, count) {
 function renderRedditResults(result) {
     return `
     <a class='js-result-name' href='https://reddit.com/${result.data.permalink}' target='_blank'>
-        <div class='link'>
             <h3>${result.data.title}</h3>
-        </div>
     </a>
     `;
 };
@@ -64,8 +62,7 @@ function displayRedditData(data) {
         REDDIT_RESULTS.html(results);
         REDDIT_BUTTONS.removeClass('hidden');
     }
-
     else{
-    REDDIT_RESULTS.html(`Oops, no results found for ${TERM.val()}.`)
+    REDDIT_RESULTS.html(`Oops, no results found for ${TERM.val()}.`);
     };
 };
