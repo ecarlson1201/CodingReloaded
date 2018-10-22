@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./css/float-grid.css" />
     <link href="https://fonts.googleapis.com/css?family=Loved+by+the+King|Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="./css/modal.css">
     <link rel="shortcut icon" href="./assets/hashtag-logo-title.png">
 
 </head>
@@ -37,6 +38,7 @@
 
     <main role="main">
         <button id="new-search" onclick="newSearch()" class="hidden">New Search</button>
+        
         <div class="row">
             <div class="col-12">
                 <div class="mozilla section hidden" role="article">
@@ -83,12 +85,18 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal" id="myModal">
+            <iframe id='iframe' autoplay></iframe>
+            <span class="close">&times;</span>
+        </div>
     </main>
 
-    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="./js/redditAPI.js"></script>
     <script src="./js/mozillaAPI.js"></script>
     <script src="./js/elements.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/youtubeAPI.js"></script>
     <script src="./js/stackoverflowAPI.js"></script>
     <script src="./js/form-submit.js"></script>

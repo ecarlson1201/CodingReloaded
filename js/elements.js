@@ -7,6 +7,8 @@ const HEADER = $('header');
 const MAIN = $('main');
 const NEW_SEARCH = $('#new-search');
 const LOADING = $('.loading');
+const MODAL = $('#myModal');
+const PLAYER = $('iframe');
 
 const YOUTUBEAPIKEY = 'AIzaSyCjQeMa3AVf38yIkwZAu3icqvSpxwGhmfw';
 const YOUTUBE_SEARCH_URL = "https://www.googleapis.com/youtube/v3/search";
@@ -34,3 +36,4 @@ let pageNum = 1;
 let displayRedditNextPage = null;
 let displayRedditPrevPage = null;
 let currentCount = 0;
+let modalData = '';

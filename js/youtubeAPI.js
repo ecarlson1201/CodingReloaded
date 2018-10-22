@@ -22,12 +22,12 @@ function getPageFromApi(searchTerm, callback, nextPage) {
 function renderResult(result) {
     return `
     <div class='youtube-table'>
-        <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}'>
+        <div class='js-result-name js-youtube-result'>
             <div class='video link'>
              <p class='vid-title'>${result.snippet.title}</p>
              <img alt='thumbnail' class="js-thumbnail thumbnail" src='${result.snippet.thumbnails.medium.url}' height='90' width='120'><br>
-             </div>
-         </a>
+            </div>
+         </div>
         <a class='js-result-name channel' href='https://www.youtube.com/channel/${result.snippet.channelId}' target='_blank'>${result.snippet.channelTitle}</a><br>
     </div>
     `;
@@ -35,8 +35,9 @@ function renderResult(result) {
 
 function displayYoutubeSearchData(data) {
     searchData = data;
+    modalData = data;
 
-    YOUTUBE_RESULTS.ready(function() {
+    YOUTUBE_RESULTS.ready(function () {
         $('#load-youtube').addClass('hidden');
     });
 
@@ -48,4 +49,5 @@ function displayYoutubeSearchData(data) {
     };
     const results = data.items.map((item, index) => renderResult(item));
     $('.js-youtube').html(results);
+    displayModal();
 };
