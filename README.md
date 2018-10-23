@@ -1,6 +1,6 @@
 Coding Reloaded
 
-Live Link: https://ecarlson1201.github.io/capstoneAPI/
+Live Link: https://ecarlson1201.github.io/CodingReloaded/
 
 ![Home Page](https://raw.githubusercontent.com/ecarlson1201/capstoneAPI/master/assets/screenshot(23).png)
 
