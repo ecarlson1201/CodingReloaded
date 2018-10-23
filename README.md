@@ -2,7 +2,7 @@ Coding Reloaded
 
 Live Link: https://ecarlson1201.github.io/capstoneAPI/
 
-![Home Page] (https://github.com/ecarlson1201/capstoneAPI/blob/master/assets/Screenshot(23).png)
+![Home Page] (https://raw.githubusercontent.com/ecarlson1201/capstoneAPI/master/assets/Screenshot(23).png)
 
 ![Results Page] (https://github.com/ecarlson1201/capstoneAPI/blob/master/assets/Screenshot(24).png)
 
