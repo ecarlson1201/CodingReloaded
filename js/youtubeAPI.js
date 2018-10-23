@@ -45,7 +45,7 @@ function renderMobileResult(result){
         <a class='js-result-name channel' href='https://www.youtube.com/channel/${result.snippet.channelId}' target='_blank'>${result.snippet.channelTitle}</a><br>
     </div>
     `;
-}
+};
 
 function displayYoutubeSearchData(data) {
     searchData = data;
