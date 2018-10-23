@@ -18,7 +18,7 @@ function handleFormSubmit() {
     });
 };
 
-function newSearch(){
+function newSearch() {
     NEW_SEARCH.toggleClass('hidden');
     HEADER.toggleClass('hidden');
     SECTION.toggleClass('hidden');

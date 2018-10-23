@@ -20,7 +20,7 @@ function displayMozillaData(data) {
     searchData = data;
     MOZILLA_RESULTS.html('');
 
-    MOZILLA_RESULTS.ready(function() {
+    MOZILLA_RESULTS.ready(function () {
         $('#load-mozilla').addClass('hidden');
     });
 
@@ -33,5 +33,5 @@ function displayMozillaData(data) {
     else {
         MOZILLA_RESULTS.html(`Oops, no results found for ${TERM.val()}.`);
     };
-    
+
 };

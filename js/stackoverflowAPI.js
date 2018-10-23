@@ -33,7 +33,7 @@ function renderStackOverflowResults(result) {
 function displayStackOverflowData(data) {
     searchData = data;
 
-    STACKOVERFLOW_RESULTS.ready(function() {
+    STACKOVERFLOW_RESULTS.ready(function () {
         $('#load-stackoverflow').addClass('hidden');
     });
 

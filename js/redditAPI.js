@@ -1,4 +1,4 @@
-function getDataFromReddit(searchTerm, callback,) {
+function getDataFromReddit(searchTerm, callback, ) {
     const query = {
         q: searchTerm,
         client_id: REDDITAPIKEY,
@@ -43,7 +43,7 @@ function renderRedditResults(result) {
 function displayRedditData(data) {
     searchData = data;
 
-    REDDIT_RESULTS.ready(function() {
+    REDDIT_RESULTS.ready(function () {
         $('#load-reddit').addClass('hidden');
     });
 
@@ -57,12 +57,12 @@ function displayRedditData(data) {
     };
 
     const results = data.data.children.map((item, index) => renderRedditResults(item));
-    
-    if(data.data.children.length > 0){
+
+    if (data.data.children.length > 0) {
         REDDIT_RESULTS.html(results);
         REDDIT_BUTTONS.removeClass('hidden');
     }
-    else{
-    REDDIT_RESULTS.html(`Oops, no results found for ${TERM.val()}.`);
+    else {
+        REDDIT_RESULTS.html(`Oops, no results found for ${TERM.val()}.`);
     };
 };

@@ -33,7 +33,7 @@ function renderResult(result) {
     `;
 };
 
-function renderMobileResult(result){
+function renderMobileResult(result) {
     return `
     <div class='youtube-table'>
         <a class='js-result-name' href='https://www.youtube.com/watch?v=${result.id.videoId}' target='_blank'>
@@ -61,13 +61,13 @@ function displayYoutubeSearchData(data) {
     prevPageFunc = function () {
         getPageFromApi(query, displayYoutubeSearchData, data.prevPageToken)
     };
-    
-    if($(window).width() > 500){
+
+    if ($(window).width() > 500) {
         const results = data.items.map((item, index) => renderResult(item));
         $('.js-youtube').html(results);
         displayModal();
     }
-    else{
+    else {
         const results = data.items.map((item, index) => renderMobileResult(item));
         $('.js-youtube').html(results);
     };
