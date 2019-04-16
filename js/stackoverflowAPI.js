@@ -30,6 +30,7 @@ function renderStackOverflowResults(result) {
     `;
 };
 
+//checks if API request returned data, mapping the data if it did
 function displayStackOverflowData(data) {
     searchData = data;
 

@@ -1,3 +1,4 @@
+//handles display changes and form submission on user submit
 function handleFormSubmit() {
     SEARCH.submit(function (event) {
         event.preventDefault();

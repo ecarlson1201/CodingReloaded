@@ -40,6 +40,7 @@ function renderRedditResults(result) {
     `;
 };
 
+//checks if API request returned data, maps data, and sets next page/prev page
 function displayRedditData(data) {
     searchData = data;
 

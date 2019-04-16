@@ -19,6 +19,7 @@ function getPageFromApi(searchTerm, callback, nextPage) {
     $.getJSON(YOUTUBE_SEARCH_URL, query, callback);
 };
 
+//renders desktop links for videos
 function renderResult(result) {
     return `
     <div class='youtube-table'>
@@ -33,6 +34,7 @@ function renderResult(result) {
     `;
 };
 
+//renders mobile links for videos
 function renderMobileResult(result) {
     return `
     <div class='youtube-table'>
@@ -47,6 +49,7 @@ function renderMobileResult(result) {
     `;
 };
 
+//checks if API request returned data, mapping results if it did
 function displayYoutubeSearchData(data) {
     searchData = data;
     modalData = data;

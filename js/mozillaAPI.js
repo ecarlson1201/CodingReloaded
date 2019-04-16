@@ -16,6 +16,7 @@ function renderMozillaResults(result) {
     `;
 };
 
+//checks if API request returned data, then maps data
 function displayMozillaData(data) {
     searchData = data;
     MOZILLA_RESULTS.html('');

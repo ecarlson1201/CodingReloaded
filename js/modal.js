@@ -1,3 +1,4 @@
+//handles display changes for modals
 function displayModal() {
     $('.link').click(function (event) {
         MODAL.css('display', 'block')
